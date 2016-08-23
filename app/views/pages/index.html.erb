@@ -2,7 +2,11 @@
 
 <div ng-app="app">
   <div ng-controller="pagesCtrl">
-    <div ng-repeat="team in teams">
+    <label>
+      Find team:
+        <input ng-model="nameFilter">
+    </label>
+    <div ng-repeat="team in teams | filter: {title: nameFilter}">
       <h3 ng-click="toggleAbbreviation(team)">{{team.title}}</h3>
       <div ng-if="team.showAbbreviation">
       <p>abbreviation: {{team.code}}</p>
