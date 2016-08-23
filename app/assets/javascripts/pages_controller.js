@@ -6,5 +6,9 @@
 
     $scope.message = "Helloooooooooo!!!";
 
-  }); 
+    $http.get("https://montanaflynn-fifa-world-cup.p.mashape.com/teams?mashape-key=95bCsuiQKCmshu20QJmBV42trRx9p12P1APjsneR2iJksGTGvQ").then(function(response){
+      $scope.teams = response.data;
+    });
+
+  });
 }());

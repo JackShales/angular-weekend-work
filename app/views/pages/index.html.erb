@@ -1,8 +1,9 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1>World Cup Teams 2014</h1>
 
 <div ng-app="app">
   <div ng-controller="pagesCtrl">
-    <p>{{ message }}</p>
+    <div ng-repeat="team in teams">
+      <h3>{{team.title}}</h3>
+    </div>
   </div>
 </div>
