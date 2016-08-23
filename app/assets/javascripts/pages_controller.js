@@ -10,5 +10,10 @@
       $scope.teams = response.data;
     });
 
+    $scope.toggleAbbreviation = function(inputTeam) {
+      console.log(inputTeam);
+      inputTeam.showAbbreviation = !inputTeam.showAbbreviation;
+    };
+
   });
 }());

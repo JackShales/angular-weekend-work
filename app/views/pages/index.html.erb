@@ -3,7 +3,10 @@
 <div ng-app="app">
   <div ng-controller="pagesCtrl">
     <div ng-repeat="team in teams">
-      <h3>{{team.title}}</h3>
+      <h3 ng-click="toggleAbbreviation(team)">{{team.title}}</h3>
+      <div ng-if="team.showAbbreviation">
+      <p>abbreviation: {{team.code}}</p>
+      </div>
     </div>
   </div>
 </div>
